@@ -14,7 +14,7 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 4. 
 
 ## Program:
-
+```
 /*
 Program to find the solution of a matrix using Gaussian Elimination.
 Developed by: Arunachalam M
@@ -46,7 +46,7 @@ for i in range(n):
     print('X%d = %0.2f' %(i,x[i]),end=' ')
 
 */
-
+```
 ## Output:
 
 <img width="815" height="448" alt="image" src="https://github.com/user-attachments/assets/60a86b0e-1b12-44b2-828b-f3ef4c60ae32" />
