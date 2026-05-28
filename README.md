@@ -14,16 +14,42 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 4. 
 
 ## Program:
-```
+
 /*
 Program to find the solution of a matrix using Gaussian Elimination.
-Developed by: 
-RegisterNumber: 
+Developed by: Arunachalam M
+RegisterNumber: 25012982
+import numpy as np
+from decimal import Decimal, ROUND_HALF_UP
+import sys
+
+n=int(input())
+a=np.zeros((n,n+1))
+x=np.zeros(n)
+for i in range (n):
+    for j in range (n+1):
+        a[i][j]=float(input())
+for i in range (n):
+    if a[i][i]==0.0:
+        sys.exit("Divide by zero detected!")
+    for j in range (i+1,n):
+        ratio=a[j][i]/a[i][i]
+        for k in range (n+1):
+            a[j][k]=a[j][k]-ratio*a[i][k]
+x[n-1]=a[n-1]/a[n-1][n-1]
+for i in range (n-2,-1,-1):
+    x[i]=a[i]
+    for j in range (i+1,n):
+        x[i]=x[i]-a[i][j]*x[j]
+    x[i]=x[i]/a[i][i]
+for i in range(n):
+    print('X%d = %0.2f' %(i,x[i]),end=' ')
+
 */
-```
 
 ## Output:
-![gaussian elimination]()
+
+<img width="815" height="448" alt="image" src="https://github.com/user-attachments/assets/60a86b0e-1b12-44b2-828b-f3ef4c60ae32" />
 
 
 ## Result:
